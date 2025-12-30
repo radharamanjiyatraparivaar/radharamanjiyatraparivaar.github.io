@@ -1,107 +1,95 @@
 :root{
-  --bg:#0b0f19;
-  --card:#101827;
-  --muted:#c9d2e6;
-  --text:#f2f5ff;
-  --line:rgba(255,255,255,.14);
-  --accent:#ffb547;   /* warm saffron */
-  --accent2:#ffd18b;  /* soft gold */
+  /* Light, soothing spiritual palette */
+  --bg:#fbf6ee;            /* warm beige */
+  --surface:#fffaf2;       /* lighter beige */
+  --card:#ffffff;
+  --text:#2a1b16;          /* deep brown */
+  --muted:#6b4a42;         /* muted brown */
+  --line:rgba(120,68,58,.18);
+
+  --maroon:#7a1f2b;        /* primary */
+  --maroon2:#9a2b3a;       /* hover */
+  --gold:#d8b26e;          /* accent */
+  --gold2:#f1e2c6;         /* soft highlight */
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .container{max-width:1100px;margin:0 auto;padding:0 18px}
 a{color:inherit;text-decoration:none}
 
+/* HERO */
 .hero{
   min-height: 92vh;
   background:
-    radial-gradient(1200px 500px at 10% 10%, rgba(255,181,71,.28), transparent 55%),
-    radial-gradient(900px 400px at 90% 10%, rgba(255,209,139,.18), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+    radial-gradient(900px 420px at 15% 10%, rgba(216,178,110,.24), transparent 60%),
+    radial-gradient(820px 360px at 90% 15%, rgba(122,31,43,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,0));
   border-bottom: 1px solid var(--line);
 }
 
+/* NAV */
 .nav{
   display:flex; align-items:center; justify-content:space-between;
   padding: 16px 18px;
   max-width:1100px; margin:0 auto;
   position: sticky; top:0;
+  background: rgba(251,246,238,.72);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(120,68,58,.12);
 }
 
-.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
 .brandMark{
   width:34px;height:34px;border-radius:10px;
   display:grid;place-items:center;
-  background: rgba(255,181,71,.14);
-  border:1px solid rgba(255,181,71,.35);
-  color: var(--accent2);
+  background: rgba(122,31,43,.10);
+  border:1px solid rgba(122,31,43,.22);
+  color: var(--maroon);
 }
 
 .navLinks{display:flex;gap:16px;list-style:none;align-items:center;margin:0;padding:0}
 .navLinks a{opacity:.92}
 .navLinks a:hover{opacity:1}
 
+/* BUTTONS */
 .btn{
   display:inline-block;
   padding: 12px 16px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color:#1a1408;
+  background: linear-gradient(135deg, var(--maroon), var(--maroon2));
+  color: #fff;
   font-weight: 800;
+  box-shadow: 0 10px 24px rgba(122,31,43,.18);
+  border: 1px solid rgba(0,0,0,0);
 }
+.btn:hover{filter:brightness(1.03)}
 .btn.ghost{
   background: transparent;
-  border: 1px solid rgba(255,181,71,.45);
-  color: var(--text);
+  border: 1px solid rgba(122,31,43,.35);
+  color: var(--maroon);
+  box-shadow: none;
 }
 
+/* HERO INNER */
 .heroInner{
   max-width:1100px;margin:0 auto;
-  padding: 58px 18px 40px;
+  padding: 62px 18px 42px;
 }
-.kicker{color:var(--accent2);opacity:.95;letter-spacing:.3px}
-h1{font-size: clamp(32px, 4vw, 52px); line-height:1.1; margin:10px 0 14px}
-.sub{max-width: 720px; color: var(--muted)}
-
-.section{padding: 56px 0}
-.section.alt{
-  background: rgba(255,255,255,.04);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.kicker{
+  color: var(--maroon);
+  letter-spacing: .3px;
+  font-weight: 800;
 }
-h2{font-size: clamp(24px, 2.6vw, 34px); margin:0 0 10px}
-.sectionSub{color:var(--muted);margin:0 0 18px;max-width:800px}
-
-.grid{display:grid;gap:14px}
-.cards{grid-template-columns: repeat(3, minmax(0,1fr))}
-.card{
-  background: rgba(255,255,255,.05);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px;
-}
-.card h3{margin:0 0 6px}
-.card p{margin:0 0 10px;color:var(--muted)}
-ul{color:var(--muted)}
-
-.footer{
-  border-top: 1px solid var(--line);
-  padding: 22px 0;
-}
-.tiny{color:var(--muted);font-size:13px}
-
-@media (max-width: 900px){
-  .cards{grid-template-columns: repeat(2, minmax(0,1fr))}
-}
-@media (max-width: 640px){
-  .cards{grid-template-columns: 1fr}
-}
+h1{
+  font-size: clamp(32px, 4vw, 52px);
+  line-height:1.1;
+  margin:
