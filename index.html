@@ -1,107 +1,111 @@
-:root{
-  --bg:#0b0f19;
-  --card:#101827;
-  --muted:#c9d2e6;
-  --text:#f2f5ff;
-  --line:rgba(255,255,255,.14);
-  --accent:#ffb547;   /* warm saffron */
-  --accent2:#ffd18b;  /* soft gold */
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radharaman Ji Yatra Parivaar</title>
+  <meta name="description" content="Spiritual Yatra tours: Vrindavan, Kashi, Ayodhya, Vaishno Devi, Shirdi, Tirupati, Char Dham and more." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <span class="brandMark">ॐ</span>
+        <span>Radharaman Ji Yatra Parivaar</span>
+      </a>
+      <ul class="navLinks">
+        <li><a href="#yatras">Yatras</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Enquire</a></li>
+      </ul>
+    </nav>
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    <div class="heroInner">
+      <p class="kicker">Spiritual Yatra Tours • Guided • Comfortable</p>
+      <h1>Peaceful Spiritual Yatras, Planned With Care</h1>
+      <p class="sub">
+        Trusted packages for Vrindavan, Kashi, Ayodhya, Vaishno Devi, Shirdi, Tirupati, and Char Dham —
+        with verified transport, comfortable stays, and on-trip support.
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
+        <a class="btn" href="#yatras">View Packages</a>
+        <a class="btn ghost" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </header>
 
-.container{max-width:1100px;margin:0 auto;padding:0 18px}
-a{color:inherit;text-decoration:none}
+  <main>
+    <section class="section" id="yatras">
+      <div class="container">
+        <h2>Popular Yatras</h2>
+        <p class="sectionSub">Pick a package or request a custom plan based on your dates and group size.</p>
 
-.hero{
-  min-height: 92vh;
-  background:
-    radial-gradient(1200px 500px at 10% 10%, rgba(255,181,71,.28), transparent 55%),
-    radial-gradient(900px 400px at 90% 10%, rgba(255,209,139,.18), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
-  border-bottom: 1px solid var(--line);
-}
+        <div class="grid cards">
+          <article class="card">
+            <h3>Vrindavan & Mathura</h3>
+            <p>Banke Bihari • Prem Mandir • Janmabhoomi</p>
+            <ul>
+              <li>2–4 days</li>
+              <li>Darshan guidance</li>
+              <li>Comfortable hotel options</li>
+            </ul>
+          </article>
 
-.nav{
-  display:flex; align-items:center; justify-content:space-between;
-  padding: 16px 18px;
-  max-width:1100px; margin:0 auto;
-  position: sticky; top:0;
-  backdrop-filter: blur(10px);
-}
+          <article class="card">
+            <h3>Kashi & Prayagraj</h3>
+            <p>Ganga Aarti • Temples • Sangam</p>
+            <ul>
+              <li>3–5 days</li>
+              <li>Local guide options</li>
+              <li>Boat ride add-on</li>
+            </ul>
+          </article>
 
-.brand{display:flex;align-items:center;gap:10px;font-weight:800}
-.brandMark{
-  width:34px;height:34px;border-radius:10px;
-  display:grid;place-items:center;
-  background: rgba(255,181,71,.14);
-  border:1px solid rgba(255,181,71,.35);
-  color: var(--accent2);
-}
+          <article class="card">
+            <h3>Char Dham Yatra</h3>
+            <p>Yamunotri • Gangotri • Kedarnath • Badrinath</p>
+            <ul>
+              <li>7–12 days</li>
+              <li>Senior-friendly pacing</li>
+              <li>Helicopter add-on</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.navLinks{display:flex;gap:16px;list-style:none;align-items:center;margin:0;padding:0}
-.navLinks a{opacity:.92}
-.navLinks a:hover{opacity:1}
+    <section class="section alt" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="sectionSub">Send your details and we’ll share package options and pricing.</p>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Phone / WhatsApp</h3>
+            <p>+91-XXXXXXXXXX</p>
+          </article>
+          <article class="card">
+            <h3>Email</h3>
+            <p>info@radharamanjiyatraparivaar.com</p>
+          </article>
+          <article class="card">
+            <h3>Location</h3>
+            <p>India</p>
+          </article>
+        </div>
+        <p class="tiny" style="margin-top:14px;">Tip: Replace the phone/email with your real details.</p>
+      </div>
+    </section>
+  </main>
 
-.btn{
-  display:inline-block;
-  padding: 12px 16px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color:#1a1408;
-  font-weight: 800;
-}
-.btn.ghost{
-  background: transparent;
-  border: 1px solid rgba(255,181,71,.45);
-  color: var(--text);
-}
+  <footer class="footer">
+    <div class="container">
+      <p class="tiny">© <span id="year"></span> Radharaman Ji Yatra Parivaar</p>
+    </div>
+  </footer>
 
-.heroInner{
-  max-width:1100px;margin:0 auto;
-  padding: 58px 18px 40px;
-}
-.kicker{color:var(--accent2);opacity:.95;letter-spacing:.3px}
-h1{font-size: clamp(32px, 4vw, 52px); line-height:1.1; margin:10px 0 14px}
-.sub{max-width: 720px; color: var(--muted)}
-
-.section{padding: 56px 0}
-.section.alt{
-  background: rgba(255,255,255,.04);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-h2{font-size: clamp(24px, 2.6vw, 34px); margin:0 0 10px}
-.sectionSub{color:var(--muted);margin:0 0 18px;max-width:800px}
-
-.grid{display:grid;gap:14px}
-.cards{grid-template-columns: repeat(3, minmax(0,1fr))}
-.card{
-  background: rgba(255,255,255,.05);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px;
-}
-.card h3{margin:0 0 6px}
-.card p{margin:0 0 10px;color:var(--muted)}
-ul{color:var(--muted)}
-
-.footer{
-  border-top: 1px solid var(--line);
-  padding: 22px 0;
-}
-.tiny{color:var(--muted);font-size:13px}
-
-@media (max-width: 900px){
-  .cards{grid-template-columns: repeat(2, minmax(0,1fr))}
-}
-@media (max-width: 640px){
-  .cards{grid-template-columns: 1fr}
-}
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
