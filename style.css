@@ -80,8 +80,8 @@ a{color:inherit;text-decoration:none}
 }
 
 .founderPhoto {
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #7a1f1f; /* maroon */
