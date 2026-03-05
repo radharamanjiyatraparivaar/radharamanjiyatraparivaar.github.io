@@ -9,8 +9,8 @@
   --line:rgba(40,60,120,.15);
 
   /* Keep maroon branding for buttons */
-  --maroon:#7a1f2b;
-  --maroon2:#9a2b3a;
+  --maroon:#16537e;
+  --maroon2:#16537e;
 
   /* Accent gold */
   --gold:#d8b26e;
@@ -172,7 +172,7 @@ h3{
   width: 300px;
   height: 375px;
   border-radius: 18px;              /* FIX: was corner-radius */
-  border: 4px solid #7a1f1f;        /* maroon */
+  border: 4px solid #16537e;        /* blue */
   object-fit: cover;
   margin: 0 10px 10px;
   background-color: #fff;
