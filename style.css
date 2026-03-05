@@ -200,7 +200,7 @@ h3{
 
 .card{
   background: var(--card);
-  border: 1px solid rgba(120,68,58,.14);
+  border: 2px solid var(--maroon);
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 14px 30px rgba(42,27,22,.06);
