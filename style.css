@@ -1,16 +1,20 @@
 :root{
-  /* Light, soothing spiritual palette */
-  --bg:#fbf6ee;            /* warm beige */
-  --surface:#fffaf2;       /* lighter beige */
+  /* Bluish white spiritual palette */
+  --bg:#f4f8ff;            /* bluish white background */
+  --surface:#ffffff;       /* cards / sections */
   --card:#ffffff;
-  --text:#2a1b16;          /* deep brown */
-  --muted:#6b4a42;         /* muted brown */
-  --line:rgba(120,68,58,.18);
 
-  --maroon:#7a1f2b;        /* primary */
-  --maroon2:#9a2b3a;       /* hover */
-  --gold:#d8b26e;          /* accent */
-  --gold2:#f1e2c6;         /* soft highlight */
+  --text:#1f2a44;          /* deep navy text */
+  --muted:#5c6b8a;         /* muted blue-gray */
+  --line:rgba(40,60,120,.15);
+
+  /* Keep maroon branding for buttons */
+  --maroon:#7a1f2b;
+  --maroon2:#9a2b3a;
+
+  /* Accent gold */
+  --gold:#d8b26e;
+  --gold2:#f1e2c6;
 }
 
 *{box-sizing:border-box}
