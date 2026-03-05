@@ -23,6 +23,7 @@ body{
   line-height: 1.65;
 }
 
+img{max-width:100%;height:auto;display:block}
 .container{max-width:1100px;margin:0 auto;padding:0 18px}
 a{color:inherit;text-decoration:none}
 
@@ -38,22 +39,50 @@ a{color:inherit;text-decoration:none}
 
 /* NAV */
 .nav{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+
   padding: 16px 18px;
-  max-width:1100px; margin:0 auto;
-  position: sticky; top:0;
+  max-width:1100px;
+  margin:0 auto;
+
+  position: sticky;
+  top:0;
+  z-index: 50;
+
   background: rgba(251,246,238,.72);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(120,68,58,.12);
 }
 
-.brandLogo {
-  height: 100px;
-  width: auto;
-  margin-right: 10px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-weight:900;
+  font-size: clamp(18px, 2.6vw, 32px);
+  letter-spacing:.3px;
+
+  min-width: 0;
+  flex: 1;
 }
 
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px;letter-spacing:.3px;}
+.brand span:last-child{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brandLogo{
+  height: clamp(44px, 6vw, 90px);
+  width: auto;
+  margin-right: 6px;
+}
+
+/* Keep brandMark in case you ever use it again */
 .brandMark{
   width:34px;height:34px;border-radius:10px;
   display:grid;place-items:center;
@@ -62,7 +91,15 @@ a{color:inherit;text-decoration:none}
   color: var(--maroon);
 }
 
-.navLinks{display:flex;gap:16px;list-style:none;align-items:center;margin:0;padding:0}
+.navLinks{
+  display:flex;
+  gap:16px;
+  list-style:none;
+  align-items:center;
+  margin:0;
+  padding:0;
+}
+
 .navLinks a{opacity:.92}
 .navLinks a:hover{opacity:1}
 
@@ -76,8 +113,10 @@ a{color:inherit;text-decoration:none}
   font-weight: 800;
   box-shadow: 0 10px 24px rgba(122,31,43,.18);
   border: 1px solid rgba(0,0,0,0);
+  transition: transform .12s ease, filter .12s ease;
 }
 .btn:hover{filter:brightness(1.03)}
+.btn:active{transform: translateY(1px)}
 .btn.ghost{
   background: transparent;
   border: 1px solid rgba(122,31,43,.35);
@@ -85,28 +124,176 @@ a{color:inherit;text-decoration:none}
   box-shadow: none;
 }
 
-.founderPhoto {
-  width: 300px;
-  height: 375px;
-  corner-radius: 50%;
-  border: 4px solid #7a1f1f; /* maroon */
-  object-fit: cover;
-  margin: 0 10px 10px;
-  display: block;
-  background-color: #fff;
-}
-
 /* HERO INNER */
 .heroInner{
-  max-width:1100px;margin:0 auto;
+  max-width:1100px;
+  margin:0 auto;
   padding: 62px 18px 42px;
 }
+
 .kicker{
   color: var(--maroon);
   letter-spacing: .3px;
   font-weight: 800;
+  margin: 0 0 10px;
 }
+
 h1{
   font-size: clamp(32px, 4vw, 52px);
   line-height:1.1;
-  margin:
+  margin: 10px 0 12px;
+}
+
+h2{
+  font-size: clamp(22px, 2.5vw, 32px);
+  margin: 12px 0 10px;
+  letter-spacing: .2px;
+}
+
+h3{
+  font-size: clamp(18px, 2vw, 22px);
+  margin: 10px 0 10px;
+}
+
+.sub{
+  margin: 0;
+  color: var(--text);
+  opacity: .95;
+  line-height: 1.75;
+  max-width: 950px;
+}
+
+/* Founder Photo */
+.founderPhoto{
+  width: 300px;
+  height: 375px;
+  border-radius: 18px;              /* FIX: was corner-radius */
+  border: 4px solid #7a1f1f;        /* maroon */
+  object-fit: cover;
+  margin: 0 10px 10px;
+  background-color: #fff;
+}
+
+/* Section basics */
+.section{
+  padding: 56px 0;
+}
+
+.section.alt{
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.sectionSub{
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+/* Cards / Grid */
+.grid.cards{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid rgba(120,68,58,.14);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 30px rgba(42,27,22,.06);
+}
+
+.card h3{margin-top:0}
+.card p{margin: 8px 0 12px;color: var(--muted)}
+.card ul{
+  margin:0;
+  padding-left: 18px;
+  color: var(--text);
+}
+.card li{margin: 6px 0}
+
+/* Footer */
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.tiny{
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* Tablet */
+@media (max-width: 900px){
+  .grid.cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heroInner{
+    padding: 44px 16px 34px;
+  }
+
+  .founderPhoto{
+    width: 280px;
+    height: 350px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .nav{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .navLinks{
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero{
+    min-height: auto; /* avoids huge empty space on mobile */
+  }
+}
+
+@media (max-width: 640px){
+  .container{padding: 0 14px}
+  .heroInner{padding: 26px 14px 28px}
+
+  .founderPhoto{
+    width: min(340px, 100%);
+    height: auto;
+    margin: 0 auto 14px;
+  }
+
+  /* Stack buttons on mobile */
+  .heroInner > div[style*="display:flex"]{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heroInner > div[style*="display:flex"] .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid.cards{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px){
+  .brandLogo{height: 44px}
+  .sub{font-size: 0.98rem}
+}
